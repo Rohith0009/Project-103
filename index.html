@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="https://unpkg.com/open-props" />
     <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="https://th.bing.com/th/id/R.a0e1267dc8e2b692507af7e081846763?rik=DGOd3rEMFYPDQQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-people-face%2f1024%2f10147-adult-light-skin-tone-icon.png&ehk=wRdZW%2fzaKU7D3nXWyEAWIV1zAWp%2bKYa1t80gpOPlfYo%3d&risl=&pid=ImgRaw&r=0">
-    <script src="main.js"></script>
+    <link
+      rel="icon"
+      href="https://th.bing.com/th/id/R.a0e1267dc8e2b692507af7e081846763?rik=DGOd3rEMFYPDQQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-people-face%2f1024%2f10147-adult-light-skin-tone-icon.png&ehk=wRdZW%2fzaKU7D3nXWyEAWIV1zAWp%2bKYa1t80gpOPlfYo%3d&risl=&pid=ImgRaw&r=0"
+    />
     <title>Face Recognizer</title>
   </head>
   <body>
@@ -22,7 +25,6 @@
       <h3 class="text-primary">Recognizable Faces:</h3>
       <ul class="list">
         <li class="text-danger">Rohith M</li>
-        <li class="text-danger">Jyothir</li>
         <li class="text-danger">Lalith</li>
         <li class="text-danger">Laasya</li>
         <li class="text-danger">Jyostna</li>
@@ -31,20 +33,17 @@
       <center>
         <h3 class="text-primary">Webcam View:</h3>
         <div id="camera"></div>
-
-        <div id="result"></div>
-
         <br />
         <button class="btn btn-outline-success" onclick="take_snapshot()">Capture Image</button>
+        <br />
 
-        <br /><br />
-        <button class="btn btn-outline-primary" onclick="check()">Identify Image</button>
-
-        <br /><br />
-
+        <h3 class="text-primary" id="taken_label"></h3>
+        <div id="result"></div>
+        <div id="identify_button"></div>
         <h4 class="text-danger">Object :<span id="result_object_name"></span></h4>
         <h4 class="text-danger">Accuracy :<span id="result_object_accuracy"></span></h4>
       </center>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
