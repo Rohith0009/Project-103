@@ -1,13 +1,47 @@
-body{
-    background: var(--gradient-22);
+body {
+  background: var(--gradient-22);
 }
 
-.list > li{
-    font-size: 18px
+.list > li {
+  font-size: 18px;
 }
 
 #camera {
   border: 2px dashed black;
   width: 350px;
   height: 300px;
+}
+
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  padding: 0 30px 30px;
+  color: #333;
+  transition: transform 0.4s, top 0.4s;
+  visibility: hidden;
+}
+
+.open-popup {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  top: 100%;
+}
+
+.button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 0;
+  background: #56b433;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }

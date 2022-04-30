@@ -40,8 +40,13 @@
         <h3 class="text-primary" id="taken_label"></h3>
         <div id="result"></div>
         <div id="identify_button"></div>
-        <h4 class="text-danger">Object :<span id="result_object_name"></span></h4>
-        <h4 class="text-danger">Accuracy :<span id="result_object_accuracy"></span></h4>
+
+        <div class="popup" id="popup">
+          <h2 class="text-primary">Results</h2>
+          <h4 class="text-danger">Object: <span id="result_object_name">Loading...</span></h4>
+          <h4 class="text-danger">Accuracy: <span id="result_object_accuracy">Loading...</span></h4>
+          <button class="button" onclick="closePopup()">Check Again</button>
+        </div>
       </center>
     </div>
     <script src="main.js"></script>
