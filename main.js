@@ -20,16 +20,16 @@ function take_snapshot() {
 
 console.log("ml5 has Been loaded👍", ml5.version);
 
+function check() {
+  popup.classList.add("open-popup");
+  img = document.getElementById("captured_img");
+  classifier.classify(img, gotresult);
+}
+
 classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/GEKVC4u3D/model.json", modelloaded);
 
 function modelloaded() {
   console.log("Successfully Loaded TeachableMachine API");
-}
-
-function check() {
-  img = document.getElementById("captured_img");
-  classifier.classify(img, gotresult);
-  popup.classList.add("open-popup");
 }
 
 function gotresult(error, results) {
